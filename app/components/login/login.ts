@@ -26,7 +26,18 @@ export class LoginComponent {
 
     
     login(){
+        
         debugger
+        let usersSetMore = this.horizonService.horizon("usersSetMore");
+
+        usersSetMore.store({
+          id: 1,          
+          from: this.user.username,
+          text: this.user.password
+       }).watch().subscribe(allChannels => {
+            console.log('Channels: ', allChannels);
+       });
+
         this.setMoreService.login(this.user).subscribe((e)=>{
 
         let notify = new Notify();

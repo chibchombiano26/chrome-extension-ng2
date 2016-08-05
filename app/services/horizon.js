@@ -16,7 +16,6 @@ var horizonService = (function () {
     function horizonService(_horizon) {
         this._horizon = _horizon;
         this.horizon = _horizon;
-        var messages = this.horizon("messages");
     }
     horizonService.prototype.ngOnInit = function () {
     };

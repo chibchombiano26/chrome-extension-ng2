@@ -16,8 +16,7 @@ export class CustomersComponent {
         this.load();
     }
 
-    load(){
-      debugger
+    load(){ 
       this.setMoreService.getCustomers().subscribe((services)=>{
             let data : any = services;
             this.ListCustomer = JSON.parse(data._body);            

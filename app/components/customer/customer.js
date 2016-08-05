@@ -20,7 +20,6 @@ var CustomersComponent = (function () {
     }
     CustomersComponent.prototype.load = function () {
         var _this = this;
-        debugger;
         this.setMoreService.getCustomers().subscribe(function (services) {
             var data = services;
             _this.ListCustomer = JSON.parse(data._body);
