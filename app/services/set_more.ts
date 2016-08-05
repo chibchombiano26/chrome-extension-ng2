@@ -21,6 +21,10 @@ export class setMoreService{
         return this.http.get(this.baseUrl + "Staff");
     }
 
+    getCustomers(){        
+        return this.http.get(this.baseUrl + "customers/fetchCustomers?pageNo=1&limit=50&orderBy=FirstName+asc&filter=&tags=");
+    }
+
     login(user: SetMoreUser) : Observable<Response>{ 
         let options = new RequestOptions({ headers: this.headers, method: "post" });
         let body = 'username=' + user.username + '&password=' + user.password;

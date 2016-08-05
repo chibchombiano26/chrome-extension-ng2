@@ -22,6 +22,9 @@ var setMoreService = (function () {
     setMoreService.prototype.getStaff = function () {
         return this.http.get(this.baseUrl + "Staff");
     };
+    setMoreService.prototype.getCustomers = function () {
+        return this.http.get(this.baseUrl + "customers/fetchCustomers?pageNo=1&limit=50&orderBy=FirstName+asc&filter=&tags=");
+    };
     setMoreService.prototype.login = function (user) {
         var options = new http_1.RequestOptions({ headers: this.headers, method: "post" });
         var body = 'username=' + user.username + '&password=' + user.password;

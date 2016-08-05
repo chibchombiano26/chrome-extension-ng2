@@ -4,4 +4,5 @@ function __export(m) {
 }
 __export(require('./setMoreUser'));
 __export(require('./staff'));
+__export(require('./customer'));
 //# sourceMappingURL=index.js.map
