@@ -6,6 +6,8 @@
   "**/**/*.js": true,
   "**/**/*.js.map": true,
   "rethinkdb_data/**" : true,
-  "app/**/*.js": true
+  "app/**/*.js": true,
+  "*.ico": true,
+  "*.png": true
   }
 }

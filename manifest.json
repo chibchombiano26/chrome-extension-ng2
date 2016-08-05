@@ -1,22 +1,22 @@
 {
   "manifest_version": 2,
-  "name": "SitePoint Bookmark Extension",
-  "short_name": "Make the most of a new tab",
-  "description": "This extension helps you save your favorite webpages.",
+  "name": "SetMore Extension",
+  "short_name": "Set More Extension",
+  "description": "This is an extension for setmore",
   "version": "1.0.0",
-  "author": "Michaela Lehr @fischaelameer",
+  "author": "Hefesoft",
 
   "icons": {
-    "19": "images/Icon-19.png",
-    "38": "images/Icon-38.png",
-    "48": "images/Icon-48.png",
-    "128": "images/Icon-128.png"
+    "19": "./images/Icon-19.png",
+    "38": "./images/Icon-38.png",
+    "48": "./images/Icon-48.png",
+    "128": "./images/Icon-128.png"
   },
 
   "browser_action": {
     "default_icon": {
-      "19": "images/Icon-19.png",
-      "38": "images/Icon-38.png"
+      "19": "./images/Icon-19.png",
+      "38": "./images/Icon-38.png"
     },
     "default_title": "Open a new tab to view your bookmarks."
   },

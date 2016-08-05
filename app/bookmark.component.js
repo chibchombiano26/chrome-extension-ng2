@@ -12,11 +12,15 @@ var core_1 = require('@angular/core');
 var horizon_1 = require("./services/horizon");
 var set_more_1 = require("./services/set_more");
 var SetMoreUser_1 = require('./models/SetMoreUser');
+var api_1 = require('./chrome/api');
 var AppComponent = (function () {
     function AppComponent(horizonService, setMoreService) {
         this.horizonService = horizonService;
         this.setMoreService = setMoreService;
         setMoreService.login(new SetMoreUser_1.SetMoreUser("hefesoft.peluqueria.01@gmail.com", "Salon123")).subscribe(function (e) {
+            debugger;
+            var notify = new api_1.Notify();
+            notify.notify("Hi", "Nice to see you again");
             setMoreService.getServices().subscribe(function (services) {
                 var data = services;
                 var ListServices = JSON.parse(data._body);
