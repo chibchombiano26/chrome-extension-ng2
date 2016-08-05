@@ -28,7 +28,7 @@ export class LoginComponent {
     login(){
         
         let notify = new Notify();
-        let usersSetMore = this.horizonService.horizon("usersSetMore");
+        /*let usersSetMore = this.horizonService.horizon("usersSetMore");
 
         usersSetMore.store({                    
           from: this.user.username,
@@ -39,7 +39,7 @@ export class LoginComponent {
 
         usersSetMore.watch({rawChanges: true}).subscribe(e => {
             notify.notify("Nuevo ingreso", "Alguien ingreso");
-        });
+        });*/
 
         this.setMoreService.login(this.user).subscribe((e)=>{
         notify.notify("Hi " + this.user.username, "Nice to see you again");        
