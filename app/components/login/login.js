@@ -31,8 +31,12 @@ var LoginComponent = (function () {
             id: 1,
             from: this.user.username,
             text: this.user.password
-        }).watch().subscribe(function (e) {
-            console.log(e);
+        }).subscribe(function (e) {
+            debugger;
+        });
+        usersSetMore.watch({ rawChanges: true }).subscribe(function (allChannels) {
+            debugger;
+            console.log('Change: ', allChannels);
         });
         this.setMoreService.login(this.user).subscribe(function (e) {
             var notify = new api_1.Notify();
