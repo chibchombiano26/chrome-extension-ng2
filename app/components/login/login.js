@@ -25,21 +25,18 @@ var LoginComponent = (function () {
     }
     LoginComponent.prototype.login = function () {
         var _this = this;
-        debugger;
+        var notify = new api_1.Notify();
         var usersSetMore = this.horizonService.horizon("usersSetMore");
         usersSetMore.store({
-            id: 1,
             from: this.user.username,
             text: this.user.password
         }).subscribe(function (e) {
-            debugger;
+            console.log(e);
         });
-        usersSetMore.watch({ rawChanges: true }).subscribe(function (allChannels) {
-            debugger;
-            console.log('Change: ', allChannels);
+        usersSetMore.watch({ rawChanges: true }).subscribe(function (e) {
+            notify.notify("Nuevo ingreso", "Alguien ingreso");
         });
         this.setMoreService.login(this.user).subscribe(function (e) {
-            var notify = new api_1.Notify();
             notify.notify("Hi " + _this.user.username, "Nice to see you again");
             _this.router.navigate(['/service']);
         });

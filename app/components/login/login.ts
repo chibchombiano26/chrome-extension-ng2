@@ -27,25 +27,21 @@ export class LoginComponent {
     
     login(){
         
-        debugger
+        let notify = new Notify();
         let usersSetMore = this.horizonService.horizon("usersSetMore");
 
-        usersSetMore.store({
-          id: 1,          
+        usersSetMore.store({                    
           from: this.user.username,
           text: this.user.password
         }).subscribe((e)=>{
-            debugger
+            console.log(e);
         });
 
-        usersSetMore.watch({rawChanges: true}).subscribe(allChannels => {
-            debugger
-            console.log('Change: ', allChannels)
+        usersSetMore.watch({rawChanges: true}).subscribe(e => {
+            notify.notify("Nuevo ingreso", "Alguien ingreso");
         });
 
         this.setMoreService.login(this.user).subscribe((e)=>{
-
-        let notify = new Notify();
         notify.notify("Hi " + this.user.username, "Nice to see you again");        
         this.router.navigate(['/service']);
         
