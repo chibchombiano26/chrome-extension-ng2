@@ -26,7 +26,7 @@ export class LoginComponent {
 
     
     login(){
-        
+        debugger
         this.setMoreService.login(this.user).subscribe((e)=>{
 
         let notify = new Notify();

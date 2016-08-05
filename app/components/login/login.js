@@ -25,6 +25,7 @@ var LoginComponent = (function () {
     }
     LoginComponent.prototype.login = function () {
         var _this = this;
+        debugger;
         this.setMoreService.login(this.user).subscribe(function (e) {
             var notify = new api_1.Notify();
             notify.notify("Hi " + _this.user.username, "Nice to see you again");
