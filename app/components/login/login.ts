@@ -34,8 +34,8 @@ export class LoginComponent {
           id: 1,          
           from: this.user.username,
           text: this.user.password
-       }).watch().subscribe(allChannels => {
-            console.log('Channels: ', allChannels);
+       }).watch().subscribe(e => {
+            console.log(e);
        });
 
         this.setMoreService.login(this.user).subscribe((e)=>{
