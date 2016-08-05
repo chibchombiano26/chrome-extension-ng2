@@ -19,6 +19,9 @@ var setMoreService = (function () {
     setMoreService.prototype.getServices = function () {
         return this.http.get(this.baseUrl + "Services");
     };
+    setMoreService.prototype.getStaff = function () {
+        return this.http.get(this.baseUrl + "Staff");
+    };
     setMoreService.prototype.login = function (user) {
         var options = new http_1.RequestOptions({ headers: this.headers, method: "post" });
         var body = 'username=' + user.username + '&password=' + user.password;

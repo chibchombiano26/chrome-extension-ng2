@@ -17,6 +17,10 @@ export class setMoreService{
         return this.http.get(this.baseUrl + "Services");
     }
 
+    getStaff() : Observable<Response>{
+        return this.http.get(this.baseUrl + "Staff");
+    }
+
     login(user: SetMoreUser) : Observable<Response>{ 
         let options = new RequestOptions({ headers: this.headers, method: "post" });
         let body = 'username=' + user.username + '&password=' + user.password;

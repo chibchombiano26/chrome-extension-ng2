@@ -6,4 +6,5 @@ function __export(m) {
 __export(require('./appSettings'));
 __export(require('./login/login'));
 __export(require('./services/service'));
+__export(require('./staff/staff'));
 //# sourceMappingURL=index.js.map

@@ -6,7 +6,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
     <h1>Component Router</h1>
     <nav>      
       <a routerLink="/" routerLinkActive="login">Login</a>
-      <a routerLink="/service" routerLinkActive="List">List</a>
+      <a routerLink="/service" routerLinkActive="List">Services</a>
+      <a routerLink="/staff" routerLinkActive="List">Staff</a>
     </nav>
     <router-outlet></router-outlet>
   `,
