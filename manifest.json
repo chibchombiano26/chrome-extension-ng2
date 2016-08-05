@@ -7,16 +7,16 @@
   "author": "Hefesoft",
 
   "icons": {
-    "19": "./images/Icon-19.png",
-    "38": "./images/Icon-38.png",
-    "48": "./images/Icon-48.png",
-    "128": "./images/Icon-128.png"
+    "19": "Icon-19.png",
+    "38": "Icon-38.png",
+    "48": "Icon-48.png",
+    "128": "Icon-128.png"
   },
 
   "browser_action": {
     "default_icon": {
-      "19": "./images/Icon-19.png",
-      "38": "./images/Icon-38.png"
+      "19": "Icon-19.png",
+      "38": "Icon-38.png"
     },
     "default_title": "Open a new tab to view your bookmarks."
   },
@@ -30,7 +30,9 @@
     "persistent": false
   },
    "web_accessible_resources": [
+    "bower_components/*",
     "node_modules/*",
+    "js/*",    
     "build/*"
   ],  
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",

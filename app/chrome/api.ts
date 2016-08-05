@@ -1,11 +1,11 @@
+//To avoid the error
+declare var chrome;
 export class Notify{
 
-
-    notify(title: string, message: string){
-        debugger
+    notify(title: string, message: string){        
         var n : any = chrome.notifications.create('reminder', {
             type: 'basic',
-            iconUrl: '/images/icon_128.png',
+            iconUrl: 'Icon-128.png',
             title: title,
             message: message
      }, function(notificationId) {});

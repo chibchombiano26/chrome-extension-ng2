@@ -3,10 +3,9 @@ var Notify = (function () {
     function Notify() {
     }
     Notify.prototype.notify = function (title, message) {
-        debugger;
         var n = chrome.notifications.create('reminder', {
             type: 'basic',
-            iconUrl: '/images/icon_128.png',
+            iconUrl: 'Icon-128.png',
             title: title,
             message: message
         }, function (notificationId) { });
