@@ -5,7 +5,5 @@ import {provide} from '@angular/core'
 
 
 export function RunApplication(horizon: any) {
-    bootstrap(AppComponent, [
-        provide("horizon", {useValue: horizon})
-    ]);  
+    bootstrap(AppComponent, [HTTP_PROVIDERS, provide("horizon", {useValue: horizon})]);  
 }

@@ -7,16 +7,16 @@
   "author": "Michaela Lehr @fischaelameer",
 
   "icons": {
-    "19": "Icon-19.png",
-    "38": "Icon-38.png",
-    "48": "Icon-48.png",
-    "128": "Icon-128.png"
+    "19": "images/Icon-19.png",
+    "38": "images/Icon-38.png",
+    "48": "images/Icon-48.png",
+    "128": "images/Icon-128.png"
   },
 
   "browser_action": {
     "default_icon": {
-      "19": "Icon-19.png",
-      "38": "Icon-38.png"
+      "19": "images/Icon-19.png",
+      "38": "images/Icon-38.png"
     },
     "default_title": "Open a new tab to view your bookmarks."
   },
@@ -39,6 +39,8 @@
     "activeTab",
      "notifications",
      "http://dockercloud-4659aec6.cloudapp.net/",
+     "https://my.setmore.com/",
+     "http://my.setmore.com/",
      "https://dockercloud-4659aec6.cloudapp.net/",
      "wss://dockercloud-4659aec6.cloudapp.net/"
   ]

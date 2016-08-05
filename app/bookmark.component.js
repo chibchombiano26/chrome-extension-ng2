@@ -10,17 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var horizon_1 = require("./services/horizon");
+var set_more_1 = require("./services/set_more");
+var SetMoreUser_1 = require('./models/SetMoreUser');
 var AppComponent = (function () {
-    function AppComponent(horizonService) {
+    function AppComponent(horizonService, setMoreService) {
         this.horizonService = horizonService;
+        this.setMoreService = setMoreService;
+        setMoreService.login(new SetMoreUser_1.SetMoreUser("hefesoft.peluqueria.01@gmail.com", "Salon123")).subscribe(function (e) {
+            setMoreService.getServices().subscribe(function (services) {
+                var data = services;
+                var ListServices = JSON.parse(data._body);
+            });
+        });
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             template: '<h1>My First Angular 2 App</h1>',
-            providers: [horizon_1.horizonService]
+            providers: [horizon_1.horizonService, set_more_1.setMoreService]
         }), 
-        __metadata('design:paramtypes', [horizon_1.horizonService])
+        __metadata('design:paramtypes', [horizon_1.horizonService, set_more_1.setMoreService])
     ], AppComponent);
     return AppComponent;
 }());

@@ -15,14 +15,8 @@ var core_1 = require("@angular/core");
 var horizonService = (function () {
     function horizonService(_horizon) {
         this._horizon = _horizon;
-        debugger;
         this.horizon = _horizon;
         var messages = this.horizon("messages");
-        messages.store({
-            sender: "Bob",
-            time: new Date(),
-            text: "Hello, World!"
-        });
     }
     horizonService.prototype.ngOnInit = function () {
     };
