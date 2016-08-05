@@ -5,6 +5,7 @@
   "**/.DS_Store": true,   
   "rethinkdb_data/**" : true,
   "app/**/*.js": true,
+  "app/**/*.js.map": true,
   "*.ico": true,
   "*.png": true
   }

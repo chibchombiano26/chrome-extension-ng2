@@ -9,37 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var horizon_1 = require("./../services/horizon");
-var set_more_1 = require("./../services/set_more");
-var SetMoreUser_1 = require('./../models/SetMoreUser');
-var appSettings_1 = require("./appSettings");
-var api_1 = require('./../chrome/api');
+var router_1 = require('@angular/router');
 var AppComponent = (function () {
-    function AppComponent(horizonService, setMoreService) {
-        this.horizonService = horizonService;
-        this.setMoreService = setMoreService;
-        this.user = new SetMoreUser_1.SetMoreUser("", "");
-        this.user.username = "hefesoft.peluqueria.01@gmail.com";
-        this.user.password = "Salon123";
+    function AppComponent() {
     }
-    AppComponent.prototype.login = function () {
-        var _this = this;
-        this.setMoreService.login(this.user).subscribe(function (e) {
-            var notify = new api_1.Notify();
-            notify.notify("Hi " + _this.user.username, "Nice to see you again");
-            _this.setMoreService.getServices().subscribe(function (services) {
-                var data = services;
-                var ListServices = JSON.parse(data._body);
-            });
-        });
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: appSettings_1.AppSettings.PATH + 'app.tpl.html',
-            providers: [horizon_1.horizonService, set_more_1.setMoreService]
+            template: "\n    <h1>Component Router</h1>\n    <nav>      \n      <a routerLink=\"/\" routerLinkActive=\"login\">Login</a>\n      <a routerLink=\"/service\" routerLinkActive=\"List\">List</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [horizon_1.horizonService, set_more_1.setMoreService])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
