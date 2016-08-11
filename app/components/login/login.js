@@ -26,16 +26,18 @@ var LoginComponent = (function () {
     LoginComponent.prototype.login = function () {
         var _this = this;
         var notify = new api_1.Notify();
-        var usersSetMore = this.horizonService.horizon("usersSetMore");
+        /*let usersSetMore = this.horizonService.horizon("usersSetMore");
+
         usersSetMore.store({
-            from: this.user.username,
-            text: this.user.password
-        }).subscribe(function (e) {
+          from: this.user.username,
+          text: this.user.password
+        }).subscribe((e)=>{
             console.log(e);
         });
-        usersSetMore.watch({ rawChanges: true }).subscribe(function (e) {
+
+        usersSetMore.watch({rawChanges: true}).subscribe(e => {
             notify.notify("Nuevo ingreso", "Alguien ingreso");
-        });
+        });*/
         this.setMoreService.login(this.user).subscribe(function (e) {
             notify.notify("Hi " + _this.user.username, "Nice to see you again");
             _this.router.navigate(['/service']);
