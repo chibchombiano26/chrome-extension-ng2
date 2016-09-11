@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {horizonService, setMoreService} from "./../../services/index";
-import { SetMoreUser, Service } from './../../models/SetMoreUser';
+import { SetMoreUser, Service } from './../../models/index';
 import {AppSettings} from "../appSettings";
 
 @Component({

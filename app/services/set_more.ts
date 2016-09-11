@@ -1,7 +1,7 @@
 import {Injectable, OnInit, Inject} from "@angular/core";
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
-import { SetMoreUser } from '../models/SetMoreUser';
+import { SetMoreUser } from '../models/index';
 
 @Injectable()
 export class setMoreService{
